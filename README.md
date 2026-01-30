@@ -32,5 +32,5 @@
 - осознанную работу с DOM и событиями
 
 ## Демо
-GitHub Pages: *(ссылка будет добавлена)*
+GitHub Pages: (https://yaramir777.github.io/form-page/)
 
