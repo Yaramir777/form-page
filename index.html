@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <script defer src="./JS/index.js"></script>
+</head>
+
+<body>
+
+<main>
+    <section class="application">
+        <div class="container">
+            <form action="#" novalidate>
+                <fieldset class="personal">
+                    <legend class="personal__desc">Контактная информация</legend>
+                    <label for="name" class="personal__label">
+                        Имя:
+                        <input type="text" name="name" id="name" class="personal__input" required>
+                        <span class="field__error"></span>
+                    </label>
+                    <label for="email" class="personal__label">
+                        Email:
+                        <input type="email" name="email" id="email" class="personal__input" required>
+                        <span class="field__error"></span>
+                    </label>
+                    <label for="phone" class="personal__label">
+                        Телефон:
+                        <input type="tel" name="phone" id="phone" class="personal__input" required>
+                        <span class="field__error"></span>
+                    </label>
+                </fieldset>
+                <fieldset class="service">
+                    <legend class="service__desc">Услуги</legend>
+                    <label for="service" class="service__choice">
+                        <select name="service" id="service" required>
+                            <option value="">Выберите услугу</option>
+                            <option value="design">Дизайн</option>
+                            <option value="development">Разработка</option>
+                            <option value="support">Поддержка</option>
+                        </select>
+                        <span class="field__error"></span>
+                    </label>
+                    <label for="message" class="service__text">
+                        Комментарий:
+                        <textarea name="message" id="message" rows="3" 
+                            placeholder="Ваши предпочтения" class="service__textarea"></textarea>
+                    </label>
+                </fieldset>
+                <fieldset class="agreement">
+                    <legend class="agreement__desc">Соглашение</legend>
+                    <label for="agreement" class="agreement__label">
+                        <input type="checkbox" name="agreement" id="agreement" class="agreement__input" required>
+                        Согласен на обработку персональных данных
+                    </label>
+                </fieldset>
+                <div class="form__actions">
+                    <button type="submit" class="button button__form" disabled>отправить</button>
+                </div>
+                <div class="form-success" hidden>
+                    <h2>Заявка отправлена</h2>
+                    <p>Мы свяжемся с вами в ближайшее время</p>
+                </div>
+            </form>
+        </div>
+    </section>
+</main>
+
+
+</body>
+
+</html>
