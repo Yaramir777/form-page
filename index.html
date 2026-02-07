@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru-RU">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Форма заявки | Учебный проект</title>
+    <meta name="description" content="Учебная форма заявки: ввод контактных данных, выбор услуги и отправка сообщения. Пример корректной семантики и доступности.">
     <link rel="stylesheet" href="./CSS/styles.css">
     <script defer src="./JS/index.js"></script>
 </head>
@@ -14,7 +15,7 @@
 <main>
     <section class="application">
         <div class="container">
-            <form action="#" novalidate>
+            <form action="/send" method="post" novalidate>
                 <fieldset class="personal">
                     <legend class="personal__desc">Контактная информация</legend>
                     <label for="name" class="personal__label">
@@ -29,7 +30,7 @@
                     </label>
                     <label for="phone" class="personal__label">
                         Телефон:
-                        <input type="tel" name="phone" id="phone" class="personal__input" required>
+                        <input type="tel" name="phone" id="phone" inputmode="tel" class="personal__input" required>
                         <span class="field__error"></span>
                     </label>
                 </fieldset>
@@ -37,7 +38,7 @@
                     <legend class="service__desc">Услуги</legend>
                     <label for="service" class="service__choice">
                         <select name="service" id="service" required>
-                            <option value="">Выберите услугу</option>
+                            <option value="" disabled selected>Выберите услугу</option>
                             <option value="design">Дизайн</option>
                             <option value="development">Разработка</option>
                             <option value="support">Поддержка</option>
